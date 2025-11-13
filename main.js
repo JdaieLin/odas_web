@@ -21,8 +21,9 @@ function createWindow () {
     width: 1200,
     height: 800,
     webPreferences: {
-              webgl: true,
-              nodeIntegration : true
+      webgl: true,
+      contextIsolation: true,
+      preload: path.join(__dirname, 'preload.js')
     },
     icon: path.join(__dirname, 'resources/images/introlab_icon.png'),
     show: false

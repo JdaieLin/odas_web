@@ -16,7 +16,7 @@ let potentialServer
    trackingServer = net.createServer();
    trackingServer.on('connection', handleConnection);
 
-   trackingServer.listen(9000, function() {
+   trackingServer.listen(9000, '0.0.0.0', function() {
      console.log('server listening to %j', trackingServer.address());
    });
 
@@ -94,7 +94,7 @@ let potentialServer
    potentialServer = net.createServer();
    potentialServer.on('connection', handlePotConnection);
 
-   potentialServer.listen(9001, function() {
+   potentialServer.listen(9001, '0.0.0.0', function() {
      console.log('server listening to %j', potentialServer.address());
    });
 

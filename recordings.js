@@ -102,7 +102,7 @@ class AudioSocket {
       })
     })
 
-    this.server.listen(this.port, () => {
+    this.server.listen(this.port, '0.0.0.0', () => {
       console.log('server listening to %j', this.server.address())
     })
   }
